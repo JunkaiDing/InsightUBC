@@ -1,0 +1,35 @@
+{
+	"title": "SELECT dept, avg WHERE avg = 97.09",
+	"input": {
+		"WHERE": {
+			"AND":[{
+				"EQ": {
+					"courses_avg": 97.09
+				}
+			},
+				{"IS": {
+					"courses_dept":"math"
+				}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_dept": "math",
+			"courses_avg": 97.09
+		},
+		{
+			"courses_dept": "math",
+			"courses_avg": 97.09
+		}
+	]
+}

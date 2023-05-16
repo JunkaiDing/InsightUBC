@@ -1,0 +1,57 @@
+{
+	"title": "OR GT LT",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"GT": {
+						"courses_avg": 99
+					}
+				},
+				{
+					"LT": {
+						"courses_avg": 2
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_fail"
+			],
+			"ORDER": "courses_fail"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_dept": "math",
+			"courses_fail": 0
+		},
+		{
+			"courses_dept": "math",
+			"courses_fail": 0
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_fail": 0
+		},
+		{
+			"courses_dept": "lfs",
+			"courses_fail": 1
+		},
+		{
+			"courses_dept": "lfs",
+			"courses_fail": 1
+		},
+		{
+			"courses_dept": "frst",
+			"courses_fail": 1
+		},
+		{
+			"courses_dept": "wood",
+			"courses_fail": 2
+		}
+	]
+}

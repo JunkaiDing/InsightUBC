@@ -1,0 +1,61 @@
+{
+	"title": "SELECT AND IS dept PSYC, WHERE avg > 95",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"courses_avg": 95
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "psyc"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg"
+			],
+			"ORDER": "courses_dept"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 96
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 97
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 95.25
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 95.25
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 95.75
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 95.75
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 96
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_avg": 96
+		}
+	]
+}

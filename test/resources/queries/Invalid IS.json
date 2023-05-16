@@ -1,0 +1,22 @@
+{
+	"title": "Invalid IS",
+	"input": {
+		"WHERE":{
+			"IS":[
+				{
+				"courses_dept":"adhe"
+			}
+			]
+		},
+		"OPTIONS":{
+			"COLUMNS":[
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER":"courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
